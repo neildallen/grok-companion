@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-full">
 
 <head>
-  <title>Nexus</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus XP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .shortcut {
+      @apply bg-black/60 text-white px-2 py-1 rounded shadow hover:bg-black/80 cursor-pointer w-max text-xs font-mono;
+    }
+
+    .modal {
+      @apply fixed inset-0 bg-black/60 hidden items-center justify-center z-50;
+    }
+
+    .modal-window {
+      @apply bg-white w-full max-w-sm rounded shadow-xl border border-gray-300;
+    }
+
+    .modal-header {
+      @apply bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t;
+    }
+
+    .modal-header button {
+      @apply text-white hover:text-gray-300;
+    }
+
+    .modal-body {
+      @apply p-4 text-black bg-white rounded-b;
+    }
+  </style>
 </head>
 
-<body style="background: black; color: lime; font-family: monospace;">
-  <h1>Hello from Nexus</h1>
+<body class="h-full w-full overflow-hidden m-0 p-0">
+
+  <!-- Background Bliss Image -->
+  <div class="fixed inset-0 z-0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Bliss_(Windows_XP).jpg" alt="Windows XP Bliss"
+      class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Top-Right Scattered Shortcuts -->
+  <div class="absolute top-4 right-4 z-10">
+    <div class="absolute top-0 right-0" onclick="openModal('modal-x')">
+      <div class="shortcut">X.exe</div>
+    </div>
+    <div class="absolute top-16 right-4" onclick="openModal('modal-ca')">
+      <div class="shortcut">Contract.exe</div>
+    </div>
+    <div class="absolute top-32 right-2" onclick="openModal('modal-nudes')">
+      <div class="shortcut">Nudes.exe</div>
+    </div>
+    <div class="absolute top-[160px] right-[60px]" onclick="openModal('modal-telegram')">
+      <div class="shortcut">Telegram.exe</div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal-x" class="modal">
+    <div class="modal-window">
+      <div class="modal-header">X.exe <button onclick="closeModal('modal-x')">✖</button></div>
+      <div class="modal-body">This is the modal content for X.exe.</div>
+    </div>
+  </div>
+
+  <div id="modal-ca" class="modal">
+    <div class="modal-window">
+      <div class="modal-header">Contract.exe <button onclick="closeModal('modal-ca')">✖</button></div>
+      <div class="modal-body">Here’s the contract address info.</div>
+    </div>
+  </div>
+
+  <div id="modal-nudes" class="modal">
+    <div class="modal-window">
+      <div class="modal-header">Nudes.exe <button onclick="closeModal('modal-nudes')">✖</button></div>
+      <div class="modal-body">Sorry! No nudes here — just an XP clone 😎</div>
+    </div>
+  </div>
+
+  <div id="modal-telegram" class="modal">
+    <div class="modal-window">
+      <div class="modal-header">Telegram.exe <button onclick="closeModal('modal-telegram')">✖</button></div>
+      <div class="modal-body">Join our community on Telegram!</div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modal Logic -->
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
 </body>
 
 </html>
