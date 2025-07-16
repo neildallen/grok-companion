@@ -185,10 +185,14 @@
       modal.classList.remove("flex");
     }
   </script>
-  <!-- 🧱 Fake Windows Taskbar -->
+
+  <!-- 🧱 Fake Windows Taskbar with Logo -->
   <div
     class="fixed bottom-0 left-0 w-full h-8 bg-gray-300 border-t border-gray-400 flex items-center justify-between px-3 text-xs font-sans z-40">
-    <div class="text-gray-800">Start</div>
+    <!-- Windows Logo -->
+    <img src="windows-logo.png" alt="Start" class="h-5 w-auto" />
+
+    <!-- Clock -->
     <div id="clock" class="text-gray-800 font-mono"></div>
   </div>
 
