@@ -14,7 +14,7 @@
   <img src="Background.png" alt="XP Background" class="absolute inset-0 object-cover w-full h-full z-0" />
 
   <!-- Shortcut Icons -->
-  <div class="absolute top-0 left-0 z-10">
+  <!-- <div class="absolute top-0 left-0 z-10">
 
     <div class="absolute top-[40px] left-[40px] flex flex-col items-center cursor-pointer"
       onclick="openModal('modal-ani')">
@@ -70,7 +70,61 @@
       <span class="text-black text-[10px] font-mono mt-1">ContractAddress.exe</span>
     </div>
 
+  </div> -->
+
+  <!-- Shortcut Icons Grid with Specific Placement -->
+  <div class="absolute top-10 left-10 z-10 grid grid-cols-3 gap-x-10 gap-y-8">
+
+    <!-- Row 1 -->
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-ca')">
+      <img src="ca.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">ContractAddress.exe</span>
+    </div>
+
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-x')">
+      <img src="xlogo.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">X.exe</span>
+    </div>
+
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-bonk')">
+      <img src="bonk.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">Bonk.exe</span>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-rudi')">
+      <img src="Rudi.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">Rudi.exe</span>
+    </div>
+
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-ani')">
+      <img src="ani.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">Ani.exe</span>
+    </div>
+
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-comingsoon')">
+      <img src="comingsoon.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">ComingSoon.exe</span>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-rudijson')">
+      <img src="rudijson.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">Rudi.json</span>
+    </div>
+
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-anijson')">
+      <img src="anijson.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">Ani.json</span>
+    </div>
+
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-comingsoonjson')">
+      <img src="comingsoonjson.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">ComingSoon.json</span>
+    </div>
+
   </div>
+
 
   <!-- Modals injected dynamically via JavaScript or placeholder -->
 
