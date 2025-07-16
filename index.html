@@ -123,6 +123,13 @@
       <span class="text-black text-[10px] font-mono mt-1">ComingSoon.json</span>
     </div>
 
+
+    <!-- Row 4 -->
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-classified')">
+      <img src="classified.png" class="w-12 h-12" />
+      <span class="text-black text-[10px] font-mono mt-1">Classified.exe</span>
+    </div>
+
   </div>
 
 
@@ -476,18 +483,35 @@ console.log(quantumTrickster.larpAction());</pre>
         <button onclick="closeModal('modal-ca')" class="text-white hover:text-gray-300">✖</button>
       </div>
       <div class="p-4 text-black bg-white rounded-b text-xs font-mono">
-        <p>📄 <strong>Official PumpFun Contract</strong></p>
+        <p>📄 <strong>Official Letsbonk.fun Contract</strong></p>
         <p class="mt-2 break-all select-all">
           <a href="https://pump.fun/0xDEADbeef1234567890CafeBabe0011223344556677" target="_blank"
             rel="noopener noreferrer" class="text-blue-600 hover:underline">
             0xDEADbeef1234567890CafeBabe0011223344556677
           </a>
         </p>
-        <p class="mt-4 italic text-gray-600">Click to open contract on Pump.fun.</p>
+        <p class="mt-4 italic text-gray-600">Click to open contract</p>
       </div>
     </div>
   </div>
 
+  <!-- Classified Modal -->
+  <div id="modal-classified" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-4xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Classified.exe
+        <button onclick="closeModal('modal-classified')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="confidential1.jpg" alt="Confidential 1" class="w-full rounded border border-gray-300" />
+          <img src="confidential2.jpg" alt="Confidential 2" class="w-full rounded border border-gray-300" />
+          <img src="confidential3.jpg" alt="Confidential 3" class="w-full rounded border border-gray-300" />
+          <img src="confidential4.jpg" alt="Confidential 4" class="w-full rounded border border-gray-300" />
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript -->
   <script>
