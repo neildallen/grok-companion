@@ -10,11 +10,12 @@
 
 <body class="relative h-screen w-screen overflow-hidden m-0 p-0">
 
-  <!-- XP Background -->
-  <img src="Background.png" alt="XP Bliss" class="absolute inset-0 object-cover w-full h-full z-0" />
+  <!-- Background Image -->
+  <img src="Background.png" alt="XP Background" class="absolute inset-0 object-cover w-full h-full z-0" />
 
-  <!-- Scattered Shortcut Icons (Top-Left) -->
+  <!-- Shortcut Icons -->
   <div class="absolute top-0 left-0 z-10">
+
     <div class="absolute top-[40px] left-[40px] flex flex-col items-center cursor-pointer"
       onclick="openModal('modal-ani')">
       <img src="ani.png" class="w-12 h-12" />
@@ -44,13 +45,19 @@
       <img src="ca.png" class="w-12 h-12" />
       <span class="text-black text-[10px] font-mono mt-1">CA.exe</span>
     </div>
+
   </div>
 
   <!-- Modals -->
-  <div id="modal-ani" class="modal">
-    <div class="modal-window">
-      <div class="modal-header">Ani.exe <button onclick="closeModal('modal-ani')">✖</button></div>
-      <div class="modal-body overflow-auto max-h-[80vh]">
+
+  <!-- Ani Modal -->
+  <div id="modal-ani" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Ani.exe
+        <button onclick="closeModal('modal-ani')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
         <pre class="text-xs font-mono whitespace-pre-wrap">
 {
   "name": "Ani",
@@ -71,10 +78,14 @@
     </div>
   </div>
 
-  <div id="modal-rudi" class="modal">
-    <div class="modal-window">
-      <div class="modal-header">Rudi.exe <button onclick="closeModal('modal-rudi')">✖</button></div>
-      <div class="modal-body overflow-auto max-h-[80vh]">
+  <!-- Rudi Modal -->
+  <div id="modal-rudi" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Rudi.exe
+        <button onclick="closeModal('modal-rudi')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
         <pre class="text-xs font-mono whitespace-pre-wrap">
 {
   "name": "Rudi",
@@ -107,10 +118,14 @@
     </div>
   </div>
 
-  <div id="modal-comingsoon" class="modal">
-    <div class="modal-window">
-      <div class="modal-header">Soon.exe <button onclick="closeModal('modal-comingsoon')">✖</button></div>
-      <div class="modal-body overflow-auto max-h-[80vh]">
+  <!-- Coming Soon Modal -->
+  <div id="modal-comingsoon" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Soon.exe
+        <button onclick="closeModal('modal-comingsoon')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
         <pre class="text-xs font-mono whitespace-pre-wrap">
 {
   "name": "Soon",
@@ -131,54 +146,43 @@
     </div>
   </div>
 
-  <div id="modal-x" class="modal">
-    <div class="modal-window">
-      <div class="modal-header">X.exe <button onclick="closeModal('modal-x')">✖</button></div>
-      <div class="modal-body">
-        Placeholder X address content here.
+  <!-- X Modal -->
+  <div id="modal-x" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-md rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        X.exe
+        <button onclick="closeModal('modal-x')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b">
+        Placeholder X address or info.
       </div>
     </div>
   </div>
 
-  <div id="modal-ca" class="modal">
-    <div class="modal-window">
-      <div class="modal-header">CA.exe <button onclick="closeModal('modal-ca')">✖</button></div>
-      <div class="modal-body">
-        Placeholder PumpFun contract content here.
+  <!-- CA Modal -->
+  <div id="modal-ca" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-md rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        CA.exe
+        <button onclick="closeModal('modal-ca')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b">
+        Placeholder PumpFun contract address or info.
       </div>
     </div>
   </div>
 
-  <!-- Styling + JS (no build tools needed) -->
-  <style>
-    .modal {
-      @apply fixed inset-0 bg-black/60 hidden items-center justify-center z-50;
-    }
-
-    .modal-window {
-      @apply bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300;
-    }
-
-    .modal-header {
-      @apply bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t;
-    }
-
-    .modal-header button {
-      @apply text-white hover:text-gray-300;
-    }
-
-    .modal-body {
-      @apply p-4 text-black bg-white rounded-b;
-    }
-  </style>
+  <!-- JavaScript -->
   <script>
     function openModal(id) {
-      document.getElementById(id).classList.remove('hidden');
-      document.getElementById(id).classList.add('flex');
+      const modal = document.getElementById(id);
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
     }
     function closeModal(id) {
-      document.getElementById(id).classList.add('hidden');
-      document.getElementById(id).classList.remove('flex');
+      const modal = document.getElementById(id);
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
     }
   </script>
 
