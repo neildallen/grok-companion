@@ -10,75 +10,113 @@
 
 <body class="relative h-screen w-screen overflow-hidden m-0 p-0">
 
-  <!-- Bliss Background -->
+  <!-- 📷 Bliss Background -->
   <img src="Background.png" alt="XP Bliss" class="absolute inset-0 object-cover w-full h-full z-0" />
 
-  <!-- Shortcut Icons -->
-  <div class="absolute top-4 right-4 z-10">
-    <div
-      class="absolute top-0 right-0 cursor-pointer bg-black bg-opacity-60 text-white text-xs font-mono px-2 py-1 rounded shadow hover:bg-opacity-80"
-      onclick="openModal('modal-x')">X.exe</div>
-    <div
-      class="absolute top-16 right-4 cursor-pointer bg-black bg-opacity-60 text-white text-xs font-mono px-2 py-1 rounded shadow hover:bg-opacity-80"
-      onclick="openModal('modal-ca')">Contract.exe</div>
-    <div
-      class="absolute top-32 right-2 cursor-pointer bg-black bg-opacity-60 text-white text-xs font-mono px-2 py-1 rounded shadow hover:bg-opacity-80"
-      onclick="openModal('modal-nudes')">Nudes.exe</div>
-    <div
-      class="absolute top-[160px] right-[60px] cursor-pointer bg-black bg-opacity-60 text-white text-xs font-mono px-2 py-1 rounded shadow hover:bg-opacity-80"
-      onclick="openModal('modal-telegram')">Telegram.exe</div>
+  <!-- 🖱 Shortcut Icons – Top Left -->
+  <div class="absolute top-4 left-4 z-10 space-y-3">
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-comingsoon')">
+      <img src="comingsoon.png" class="w-12 h-12" />
+      <span class="text-white text-[10px] font-mono mt-1">Comingsoon.exe</span>
+    </div>
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-rudi')">
+      <img src="Rudi.png" class="w-12 h-12" />
+      <span class="text-white text-[10px] font-mono mt-1">Rudi.exe</span>
+    </div>
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-ani')">
+      <img src="ani.png" class="w-12 h-12" />
+      <span class="text-white text-[10px] font-mono mt-1">Ani.exe</span>
+    </div>
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-xlogo')">
+      <img src="xlogo.png" class="w-12 h-12" />
+      <span class="text-white text-[10px] font-mono mt-1">X.exe</span>
+    </div>
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-bonk')">
+      <img src="bonk.png" class="w-12 h-12" />
+      <span class="text-white text-[10px] font-mono mt-1">Bonk.exe</span>
+    </div>
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-classified')">
+      <img src="classified.png" class="w-12 h-12" />
+      <span class="text-white text-[10px] font-mono mt-1">Classified.exe</span>
+    </div>
+    <div class="flex flex-col items-center cursor-pointer" onclick="openModal('modal-ca')">
+      <img src="ca.png" class="w-12 h-12" />
+      <span class="text-white text-[10px] font-mono mt-1">CA.exe</span>
+    </div>
   </div>
 
-  <!-- Modals -->
-  <div id="modal-x" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+  <!-- 🪟 Modal Template Blocks -->
+  <div id="modal-comingsoon" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Comingsoon.exe
+        <button onclick="closeModal('modal-comingsoon')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b">Feature coming soon!</div>
+    </div>
+  </div>
+
+  <div id="modal-rudi" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Rudi.exe
+        <button onclick="closeModal('modal-rudi')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b">Rudi info or feature here.</div>
+    </div>
+  </div>
+
+  <div id="modal-ani" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Ani.exe
+        <button onclick="closeModal('modal-ani')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b">Ani’s detail goes here.</div>
+    </div>
+  </div>
+
+  <div id="modal-xlogo" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
     <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
       <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
         X.exe
-        <button onclick="closeModal('modal-x')" class="text-white hover:text-gray-300">✖</button>
+        <button onclick="closeModal('modal-xlogo')" class="text-white hover:text-gray-300">✖</button>
       </div>
-      <div class="p-4 text-black bg-white rounded-b">
-        This is the modal content for X.exe.
+      <div class="p-4 text-black bg-white rounded-b">This is the modal content for X.exe.</div>
+    </div>
+  </div>
+
+  <div id="modal-bonk" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Bonk.exe
+        <button onclick="closeModal('modal-bonk')" class="text-white hover:text-gray-300">✖</button>
       </div>
+      <div class="p-4 text-black bg-white rounded-b">Bonk bonk bonk.</div>
+    </div>
+  </div>
+
+  <div id="modal-classified" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Classified.exe
+        <button onclick="closeModal('modal-classified')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b">You don’t have clearance for this one.</div>
     </div>
   </div>
 
   <div id="modal-ca" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
     <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
       <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
-        Contract.exe
+        CA.exe
         <button onclick="closeModal('modal-ca')" class="text-white hover:text-gray-300">✖</button>
       </div>
-      <div class="p-4 text-black bg-white rounded-b">
-        Here's the contract address info.
-      </div>
+      <div class="p-4 text-black bg-white rounded-b">Here’s the contract address info.</div>
     </div>
   </div>
 
-  <div id="modal-nudes" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-    <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
-      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
-        Nudes.exe
-        <button onclick="closeModal('modal-nudes')" class="text-white hover:text-gray-300">✖</button>
-      </div>
-      <div class="p-4 text-black bg-white rounded-b">
-        Sorry! No nudes here — just an XP clone 😎
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-telegram" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-    <div class="bg-white w-full max-w-sm rounded shadow-xl border border-gray-300">
-      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
-        Telegram.exe
-        <button onclick="closeModal('modal-telegram')" class="text-white hover:text-gray-300">✖</button>
-      </div>
-      <div class="p-4 text-black bg-white rounded-b">
-        Join our community on Telegram!
-      </div>
-    </div>
-  </div>
-
-  <!-- JS Modal Logic -->
+  <!-- 🧠 JavaScript Logic -->
   <script>
     function openModal(id) {
       const modal = document.getElementById(id);
