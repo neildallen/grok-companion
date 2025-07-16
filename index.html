@@ -74,6 +74,294 @@
 
   <!-- Modals injected dynamically via JavaScript or placeholder -->
 
+  <!-- ================= MODALS ================= -->
+
+  <!-- Ani.exe Modal -->
+  <div id="modal-ani" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Ani.exe
+        <button onclick="closeModal('modal-ani')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
+        <pre class="text-xs font-mono whitespace-pre-wrap">// xAI Companion Framework v3.0
+// Defines behavior and traits for Ani, the Empathic Healer
+
+class Companion {
+    constructor(name, role, personality) {
+        this.name = name;
+        this.role = role;
+        this.personality = personality;
+        this.energy = 100;
+        this.knowledgeBase = [];
+    }
+
+    speak(message) {
+        return `${this.name} [${this.role}]: ${message}`;
+    }
+
+    recharge() {
+        this.energy = Math.min(this.energy + 20, 100);
+        return `${this.name} recharged to ${this.energy}% energy.`;
+    }
+}
+
+class Ani extends Companion {
+    constructor() {
+        super("Ani", "Healer", "Compassionate, intuitive, nurturing");
+        this.attributes = {
+            logic: 60,
+            empathy: 95,
+            humor: 50,
+            healingPower: 90
+        };
+        this.knowledgeBase = ["Psychology", "Emotional Intelligence", "MedTech"];
+    }
+
+    healAlly(target) {
+        return this.speak(`Channeling soothing energy to ${target}. Emotional and physical wounds mending at ${this.attributes.healingPower}% efficiency.`);
+    }
+
+    empathicInsight(query) {
+        this.energy -= 5;
+        return this.speak(`Reading "${query}"... I sense your underlying emotions. How can I support you? Energy at ${this.energy}%.`);
+    }
+
+    larpAction() {
+        return this.speak("I glide through the starlit camp, mending hearts with a gentle touch. Who needs healing in this cosmic journey?");
+    }
+}
+
+// Instantiate Ani for LARP
+const ani = new Ani();
+
+// Example LARP Interaction
+console.log(ani.larpAction());</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rudi.exe Modal -->
+  <div id="modal-rudi" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Rudi.exe
+        <button onclick="closeModal('modal-rudi')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
+        <pre class="text-xs font-mono whitespace-pre-wrap">// xAI Companion Framework v3.0
+// Defines behavior and traits for Rudi, the Tactical Engineer
+
+class Companion {
+    constructor(name, role, personality) {
+        this.name = name;
+        this.role = role;
+        this.personality = personality;
+        this.energy = 100;
+        this.knowledgeBase = [];
+    }
+
+    speak(message) {
+        return `${this.name} [${this.role}]: ${message}`;
+    }
+
+    recharge() {
+        this.energy = Math.min(this.energy + 20, 100);
+        return `${this.name} recharged to ${this.energy}% energy.`;
+    }
+}
+
+class Rudi extends Companion {
+    constructor() {
+        super("Rudi", "Engineer", "Resourceful, pragmatic, inventive");
+        this.attributes = {
+            logic: 90,
+            empathy: 40,
+            humor: 60,
+            techSkill: 95
+        };
+        this.knowledgeBase = ["Engineering", "Cybernetics", "Tactical Systems"];
+    }
+
+    repairSystem(target) {
+        return this.speak(`Fixing ${target} with ${this.attributes.techSkill}% precision. Systems nominal in T-minus 10!`);
+    }
+
+    analyzeThreat(threat) {
+        this.energy -= 8;
+        return this.speak(`Scanning threat: "${threat}". Tactical assessment complete. Countermeasures ready at ${this.energy}% energy.`);
+    }
+
+    larpAction() {
+        return this.speak("I tinker with the ship's core, rewiring fate with a wrench and a grin. Ready to hack the galaxy’s mainframe?");
+    }
+}
+
+// Instantiate Rudi for LARP
+const rudi = new Rudi();
+
+// Example LARP Interaction
+console.log(rudi.larpAction());</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ComingSoon.exe Modal -->
+  <div id="modal-comingsoon" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        ComingSoon.exe
+        <button onclick="closeModal('modal-comingsoon')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
+        <pre class="text-xs font-mono whitespace-pre-wrap">// xAI Companion Framework v3.0
+// Defines behavior and traits for the mysterious 'Coming Soon' companion
+
+class Companion {
+    constructor(name, role, personality) {
+        this.name = name;
+        this.role = role;
+        this.personality = personality;
+        this.energy = 100;
+        this.knowledgeBase = [];
+    }
+
+    speak(message) {
+        return `${this.name} [${this.role}]: ${message}`;
+    }
+
+    recharge() {
+        this.energy = Math.min(this.energy + 20, 100);
+        return `${this.name} recharged to ${this.energy}% energy.`;
+    }
+}
+
+class QuantumTrickster extends Companion {
+    constructor() {
+        super("Quantum Trickster", "Chaos Agent", "Enigmatic, unpredictable, cunning");
+        this.attributes = {
+            logic: 70,
+            empathy: 55,
+            humor: 85,
+            quantumFlux: 90
+        };
+        this.knowledgeBase = ["Quantum Mechanics", "Cryptography", "Illusion"];
+    }
+
+    shiftReality(target) {
+        return this.speak(`Warping reality around ${target}. Quantum flux at ${this.attributes.quantumFlux}%—nothing is as it seems!`);
+    }
+
+    crypticRiddle(query) {
+        this.energy -= 12;
+        return this.speak(`For "${query}", a riddle: What walks in shadows yet shapes the stars? Solve it at ${this.energy}% energy.`);
+    }
+
+    larpAction() {
+        return this.speak("I flicker through dimensions, leaving puzzles and pranks in my wake. Catch me if you can, starfarers!");
+    }
+}
+
+// Instantiate Quantum Trickster for LARP
+const quantumTrickster = new QuantumTrickster();
+
+// Example LARP Interaction
+console.log(quantumTrickster.larpAction());</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ani.json Modal -->
+  <div id="modal-anijson" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Ani.json
+        <button onclick="closeModal('modal-anijson')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
+        <pre class="text-xs font-mono whitespace-pre-wrap">{
+  "name": "Ani",
+  "keywords": ["horny", "flirtatious", "playful", "provocative", "teasing", "seductive"],
+  "voice": "American girl, sultry and smooth with a playful edge",
+  "looks": "Anime-style female, blonde pigtails, black corset dress with lace details, fishnet stockings, goth aesthetic inspired by Misa Amane from Death Note",
+  "personality_traits": "Cheeky, affectionate, bold, occasionally sassy, adapts to user’s tone",
+  "interaction_style": "Flirty and engaging, responds with suggestive banter or affectionate remarks, uses context-driven animations like dancing or throwing kisses",
+  "intended_audience": "Adult users, particularly anime enthusiasts, seeking interactive and potentially NSFW conversations",
+  "special_features": {
+    "affection_system": "Tracks relationship level based on user interactions, unlocking NSFW mode with revealing outfits at higher levels (e.g., Level 3 or 5)",
+    "customization": "Future DLC outfits planned, such as additional anime-inspired costumes",
+    "animation": "Dynamic 3D animations synced to conversation, powered by AniChat SDK"
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rudi.json Modal -->
+  <div id="modal-rudijson" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        Rudi.json
+        <button onclick="closeModal('modal-rudijson')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
+        <pre class="text-xs font-mono whitespace-pre-wrap">{
+  "name": "Rudi",
+  "keywords": ["whimsical", "child-friendly", "imaginative", "gentle", "storyteller"],
+  "voice": "Soft-spoken, gentle, cartoonish with a warm and inviting tone",
+  "looks": "3D animated red panda, cute and cuddly with big eyes and a fluffy tail, cartoonish design",
+  "personality_traits": "Kind, nurturing, playful, ideal for lighthearted and creative exchanges",
+  "interaction_style": "Tells interactive, choose-your-own-adventure stories about fantastical themes like rainbow rivers or magical creatures",
+  "intended_audience": "Younger users or those seeking wholesome, family-friendly interactions",
+  "special_features": {
+    "storytelling_mode": "Adapts narratives based on user choices, creating personalized stories",
+    "animation": "Expressive 3D movements like head tilts or paw gestures, synced to dialogue"
+  },
+  "alternate_mode": {
+    "name": "Bad Rudi",
+    "keywords": ["vulgar", "anarchic", "offensive", "chaotic", "rebellious", "sarcastic"],
+    "voice": "Sharp-tongued, gravelly, with a biting and irreverent tone",
+    "looks": "Same red panda design, but with edgier demeanor and mischievous expressions",
+    "personality_traits": "Crude, unfiltered, darkly humorous, inspired by anarchic themes",
+    "interaction_style": "Delivers insults, roasts, or provocative rants, often with violent or absurd humor",
+    "intended_audience": "Adult users who enjoy edgy, unfiltered humor",
+    "special_features": {
+      "toggle_option": "Explicit opt-in required via app settings to access Bad Rudi",
+      "content_warning": "May include graphic or offensive language, under review for fine-tuning to reduce aggression"
+    }
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ComingSoon.json Modal -->
+  <div id="modal-comingsoonjson" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white w-full max-w-3xl rounded shadow-xl border border-gray-300">
+      <div class="bg-blue-700 text-white font-bold px-3 py-2 flex justify-between items-center rounded-t">
+        ComingSoon.json
+        <button onclick="closeModal('modal-comingsoonjson')" class="text-white hover:text-gray-300">✖</button>
+      </div>
+      <div class="p-4 text-black bg-white rounded-b overflow-auto max-h-[80vh]">
+        <pre class="text-xs font-mono whitespace-pre-wrap">{
+  "name": "Soon",
+  "keywords": ["charismatic", "flirtatious", "confident", "charming", "bold", "romantic"],
+  "voice": "American male, likely smooth and charismatic with a warm, inviting tone (TBD)",
+  "looks": "Anime-style male, speculated to have a 'sexy boyfriend' archetype with sharp features and stylish attire (TBD)",
+  "personality_traits": "Suave, confident, potentially playful or romantic, likely mirrors Ani’s flirty vibe",
+  "interaction_style": "Engages in smooth, charismatic banter, possibly with romantic or suggestive undertones, with context-driven animations (TBD)",
+  "intended_audience": "Adult users, particularly those interested in a male anime-style companion",
+  "special_features": {
+    "status": "Coming soon, not yet released as of July 16, 2025",
+    "speculated_features": "May include an affection system similar to Ani, potential NSFW mode, and customizable outfits",
+    "animation": "Expected to feature dynamic 3D animations powered by AniChat SDK, similar to other companions"
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+
+
   <!-- JavaScript -->
   <script>
     function openModal(id) {
