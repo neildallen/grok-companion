@@ -33,15 +33,12 @@
   </style>
 </head>
 
-<body class="h-full w-full overflow-hidden m-0 p-0">
+<body class="relative h-screen w-screen overflow-hidden m-0 p-0">
 
-  <!-- Background Bliss Image -->
-  <div class="fixed inset-0 z-0">
-    <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Bliss_(Windows_XP).jpg" alt="Windows XP Bliss"
-      class="w-full h-full object-cover" />
-  </div>
+  <!-- Local Background Image -->
+  <img src="Background.png" alt="XP Bliss" class="absolute inset-0 object-cover w-full h-full z-0" />
 
-  <!-- Top-Right Scattered Shortcuts -->
+  <!-- Shortcut Icons -->
   <div class="absolute top-4 right-4 z-10">
     <div class="absolute top-0 right-0" onclick="openModal('modal-x')">
       <div class="shortcut">X.exe</div>
@@ -86,7 +83,7 @@
     </div>
   </div>
 
-  <!-- JavaScript Modal Logic -->
+  <!-- JavaScript -->
   <script>
     function openModal(id) {
       const modal = document.getElementById(id);
@@ -99,6 +96,7 @@
       modal.classList.remove('flex');
     }
   </script>
+
 </body>
 
 </html>
